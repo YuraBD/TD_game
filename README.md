@@ -7,8 +7,9 @@ Improve programming skills in collaboration with other students and create an en
 ## Installation: 
 
 ## API Reference:
-API used for this project: ![PokéAPI](https://pokeapi.co/)
-Check out a ![module with its usage example](https://github.com/YuraBD/TD_game/blob/main/tests/test.py) and ![API documentation](https://pokeapi.co/docs/v2)
+API used for this project: [PokéAPI](https://pokeapi.co/).
+
+Check out a [module with its usage example](https://github.com/YuraBD/TD_game/blob/main/tests/test.py) and [API documentation](https://pokeapi.co/docs/v2)
 
 ## Usage: 
 
