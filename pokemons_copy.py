@@ -49,7 +49,7 @@ class Tower(arcade.Sprite):
         self.hp = hp
         self.path = tower_path
         self.texture = arcade.load_texture(f'{self.path}')
-        self.texture_destroyed = arcade.load_texture(f'{self.path}')
+        self.texture_destroyed = arcade.load_texture(f'{self.path[:-4]}_destroyed.png')
         self.destroyed = False
 
     def attacked(self, damage):
