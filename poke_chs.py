@@ -57,8 +57,8 @@ def choose_random_pokes(num, path):
             name = stats[i][0]
             hp = 200 + round((stats[i][1]/max_hp)*300)
             attack = stats[i][2]
-            price = round(1000*(hp/500 + attack/max_attack)/2)
-            stats_file.write(f"name {name}\nhp {hp}\nattack {attack}\nprice {price}")
+            price = round(100*(hp/500 + attack/max_attack)/2)
+            stats_file.write(f"{name}\n{hp}\n{attack}\n{price}")
 
 
 choose_random_pokes(5, "friendly_sprites")

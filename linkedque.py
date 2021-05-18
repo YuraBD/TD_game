@@ -26,8 +26,24 @@ class LinkedQueue(AbstractCollection):
             yield cursor.data
             cursor = cursor.next
 
+    def insert(self, item, pos):
+        new_node = Node(item, None)
+        i = 0
+        prev = None
+        curr = self._front
+        while i != pos:
+            i += 1
+            prev = curr
+            curr = curr.next
+        if curr == self._front:
+            new_node.next = curr
+            self._front = new_node
+        elif curr is None:
+            self.add(item)
+        else:
+            new_node.next = curr
+            prev.next = new_node
 
-        
     def peek(self):
         """
         Returns the item at the front of the queue.
@@ -96,3 +112,41 @@ class LinkedQueue(AbstractCollection):
     def draw_hit_boxes(self, color = (0, 0, 0, 255), line_thickness: float = 1):
         for poke in self:
             poke.draw_hit_box(color, line_thickness)
+
+
+if __name__ == "__main__":
+    q = LinkedQueue()
+    q.add(1)
+    q.add(2)
+    q.add(3)
+    for i in q:
+        print(i, end=' ')
+    print()
+    q.insert("a", 0)
+    for i in q:
+        print(i, end=' ')
+    print()
+    q = LinkedQueue()
+    q.add(1)
+    q.add(2)
+    q.add(3)
+    q.insert("a", 1)
+    for i in q:
+        print(i, end=' ')
+    print()
+    q = LinkedQueue()
+    q.add(1)
+    q.add(2)
+    q.add(3)
+    q.insert("a", 2)
+    for i in q:
+        print(i, end=' ')
+    print()
+    q = LinkedQueue()
+    q.add(1)
+    q.add(2)
+    q.add(3)
+    q.insert("a", 3)
+    for i in q:
+        print(i, end=' ')
+    print()
